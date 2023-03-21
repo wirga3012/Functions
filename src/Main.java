@@ -23,6 +23,8 @@ public class Main {
 
         System.out.println("----------------3----------------");
 
+
+
         //Sukurkite Funkciją kuri priima du int tipo kintamuosius. Funkcija gražina skaičių sandaugą.;
         // Gautą reikšmę atspausdinkite.
         System.out.println("-----------------4-----------------");
@@ -56,47 +58,77 @@ public class Main {
 
         //Sukurkite Funkciją kuri priimtų sakinį kaip kintamąjį ir atspausdintų kiek jame yra raidžių ir tarpų.
         // Sakinys - “Šiandien labai graži diena”. (kodas turi veikti padavus bet kokį sakinį)
-
+        System.out.println("-------------9-----------");
         String sentence = "\"Šiandien labai \n graži \t diena\"";
 
         System.out.println(sentence);
         printSentence(sentence);
 //      Sukurkite Funkciją kuri priimtų sakinį, jį užkoduotų ir grąžintų. Kodavimas - sakinį apsukame iš kitos pusės.
 //      Pvz “Naglis” turi gautis “silgaN”.
+        System.out.println("-------------10---------------");
 
-        String name = "Virgaile yra maladiec";
+        String name = "Virgaile mokosi programuoti";
 
         System.out.println(reverseWords(name));
         System.out.println(reverseWords(name.split(" ")));
         System.out.println(5);
-        System.out.println("kjhk");
+        System.out.println(" Sveikuciai");
+
+//     Parašykite funkciją, kurios argumentas būtų tekstas, kuris būtų atspausdinamas konsolėje pridedant
+//     “---” pradžioje ir gale. PVZ (---labas---)
+        System.out.println("------1 sunkesnis---------");
+
+       String word = "labas";
+       printWord(word);
+
+//    Sugeneruokite atsitiktinį stringą iš raidžių ir skaičių (10 simbolių). Atspausdinkite simbolius stulpeliu.
+//    Jei tai skaičius apgaubkite “ [ 7 ]”. Jei skaičiai eina keli iš eilės, apgaubkite juos kartu. [75].
+        System.out.println("----------2 sunkesnis-------");
+
+        System.out.println(generateRndStr(10));
+
+        System.out.println("------------3 sunkesnis------");
+
+        System.out.println(integer(15));
+
+
+
+
+
+
+
+
     }
+
+
+
+
 //    public static void Pirmauzduotis() {
 //        sum(4,1);
 //        sum(4,1);
 //        sum(4,1);
 //
 //    }
-
+// 1 uzduotis
     public static void sum(int number1, int number2) {
         System.out.println(number1 + number2);
     }
-
+// 2 uzduotis
     public static double PISq() {
         return 9.8596;
     }
-
+//3 uzduotis
     public static int skaiciuSandauga(int number1, int number2) {
         return (number1 * number2);
     }
-
+// 4 uzduotis
     public static void printNumbers(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i]);
 
         }
     }
-
+// 5 uzduotis
     public static int[] randomArr(int min, int max) {
         int[] numbers = new int[5];
         for (int i = 0; i < numbers.length; i++) {
@@ -104,7 +136,7 @@ public class Main {
         }
         return numbers;
     }
-
+// 6 uzduotis
     public static int arraySum(int[] nums) {
 //        return Arrays.stream(nums).sum();
         int sum = 0;
@@ -114,11 +146,11 @@ public class Main {
         return sum;
 
     }
-
+// 7 uzduotis
     public static int arrayAvg(int[] nums) {
         return arraySum(nums) / nums.length;
     }
-
+// 8 uzduotis
     public static void printRectangle(int number1, int number2) {
         for (int i = 0; i < number1; i++) {
             System.out.print("<[");
@@ -131,7 +163,7 @@ public class Main {
         }
 
     }
-
+// 9 uzduotis
     public static void printSentence(String words) {
         int spaceCounter = 0;
         int lettersCounter = 0;
@@ -146,7 +178,7 @@ public class Main {
         }
         System.out.println("tarpu yra - " + spaceCounter + " raidziu yra - " + lettersCounter);
     }
-
+// 10 uzduotis
     public static String reverseWords(String words) {
         String reversedWords = "";
         for (int j = words.length() - 1; j >= 0; j--) {
@@ -167,4 +199,58 @@ public class Main {
         }
         return reversedWords;
     }
+
+//    1 sunkesnis
+    public static void printWord (String words){
+        String beginSimbol = "----";
+        String endSimbol = "----";
+
+
+        System.out.println(beginSimbol + words + endSimbol);
+
+    }
+//    2 sunkesnis
+        public static String generateRndStr (int lenght){
+        String characters = "ghkjjkhgjhgghffffjyk2516555655454322486647";
+        String rndStr = "";
+        System.out.println(rndStr);
+
+
+        String nums = "";
+        for (int i = 0; i < rndStr.length(); i++) {
+            if (Character.isDigit(characters.charAt(i))){
+                rndStr += rndStr.charAt(i);
+                nums += rndStr.charAt(i);
+
+            }else{
+                if(nums.length() !=0){
+                    System.out.println("[" + nums + "]");
+                    nums ="";
+                }
+                System.out.println(rndStr.charAt(i));
+            }
+            if (nums.length() !=0 ){
+                System.out.println("[" + nums +  "]");
+            }
+        }
+
+        return rndStr;
+
+    }
+//    3 sunkesnis
+    public static int integer (int roundNumber){
+        int count = 0;
+        for (int i = 2; i <=roundNumber ; i++) {
+            if (roundNumber % i ==0){
+                count++;
+            }
+        }
+        return count;
+    }
+ // 4 sunkesnis
+
+
+
+
+
 }
