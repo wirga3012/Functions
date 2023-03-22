@@ -1,15 +1,13 @@
 import java.io.IOException;
-import java.sql.SQLOutput;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         System.out.println("-------------1--------------------");
 //        Pirmauzduotis();
         //Sukurkite Funkciją kuri priima du int tipo kintamuosius. Juos susumuoja ir atspausdina.
 
         int number1 = 2023;
         int number2 = 2025;
-        System.out.println();
 
         sum(number1, number2);
         sum(16, 20);
@@ -17,7 +15,6 @@ public class Main {
         System.out.println("--------------2---------------");
         //Sukurkite Funkciją kuri vadinasi PISq. Funkcija gražina double tipo reikšmę. Reikšmė yra : 9.8596;
         // Gautą reikšmę atspausdinkite.
-
 
         System.out.println(PISq());
 
@@ -89,7 +86,12 @@ public class Main {
 
         System.out.println("------------3 sunkesnis------");
 
-        System.out.println(integer(15));
+        String txt = generateRndStr(10);
+
+        System.out.println(txt);
+
+        System.out.println("--------------4 sunkesnis----------");
+
 
 
 
@@ -211,14 +213,14 @@ public class Main {
     }
 //    2 sunkesnis
         public static String generateRndStr (int lenght){
-        String characters = "ghkjjkhgjhgghffffjyk2516555655454322486647";
+        String txt = "ghkjjkhgjhgghffffjyk2516555655454322486647";
         String rndStr = "";
         System.out.println(rndStr);
 
 
         String nums = "";
         for (int i = 0; i < rndStr.length(); i++) {
-            if (Character.isDigit(characters.charAt(i))){
+            if (Character.isDigit(txt.charAt(i))){
                 rndStr += rndStr.charAt(i);
                 nums += rndStr.charAt(i);
 
@@ -247,10 +249,11 @@ public class Main {
         }
         return count;
     }
- // 4 sunkesnis
+ // 4 sunkesnis. Sugeneruokite masyvą iš 100 elementų, kurio reikšmės atsitiktiniai skaičiai nuo 33 iki 77.
+    // Išrūšiuokite masyvą pagal daliklių be liekanos kiekį mažėjimo tvarka, panaudodami trečio uždavinio funkciją.
 
 
 
 
 
-}
+    }
